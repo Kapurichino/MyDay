@@ -1,16 +1,5 @@
 # MyDay
 
-A new Flutter project.
+하루동안 있었던 일을 웹툰 형식의 어플리케이션으로 만들어보았습니다.
 
-## Getting Started
-
-This project is a starting point for a Flutter application.
-
-A few resources to get you started if this is your first Flutter project:
-
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
-
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+이는 제출용으로 만들어진 임시 레포로, 이후 Private로 전환될 수 있습니다.
