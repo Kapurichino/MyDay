@@ -1,13 +1,22 @@
 import 'package:flutter/material.dart';
+import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:url_launcher/url_launcher.dart';
 
 class Introduction extends StatelessWidget {
   Introduction({Key? key}) : super(key: key);
-  final Uri _url = Uri.parse(
+  final Uri _projectUrl = Uri.parse(
       'https://github.com/CAU-MobileApp/GlobalTime/releases/tag/v1.0.0');
-  Future<void> _launchUrl() async {
-    if (!await launchUrl(_url)) {
-      throw Exception('Could not launch $_url');
+  final Uri _githubUrl = Uri.parse(
+      'https://github.com/CAU-MobileApp/GlobalTime/releases/tag/v1.0.0');
+  Future<void> _launchProjectUrl() async {
+    if (!await launchUrl(_projectUrl)) {
+      throw Exception('Could not launch $_projectUrl');
+    }
+  }
+
+  Future<void> _launchGithubUrl() async {
+    if (!await launchUrl(_githubUrl)) {
+      throw Exception('Could not launch $_githubUrl');
     }
   }
 
@@ -40,11 +49,23 @@ class Introduction extends StatelessWidget {
                   right: 50,
                   child: Center(
                     child: ElevatedButton(
-                      onPressed: _launchUrl,
+                      onPressed: _launchProjectUrl,
                       child: const Text('다운로드'),
                     ),
                   ),
                 )
+              ],
+            ),
+            Stack(
+              children: [
+                Image.asset('assets/introduction/12.jpg'),
+                Positioned(
+                    left: 100,
+                    top: 15,
+                    child: IconButton(
+                      onPressed: _launchGithubUrl,
+                      icon: const FaIcon(FontAwesomeIcons.github, size: 40),
+                    ))
               ],
             )
           ],
