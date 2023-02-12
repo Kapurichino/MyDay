@@ -6,8 +6,7 @@ class Introduction extends StatelessWidget {
   Introduction({Key? key}) : super(key: key);
   final Uri _projectUrl = Uri.parse(
       'https://github.com/CAU-MobileApp/GlobalTime/releases/tag/v1.0.0');
-  final Uri _githubUrl = Uri.parse(
-      'https://github.com/CAU-MobileApp/GlobalTime/releases/tag/v1.0.0');
+  final Uri _githubUrl = Uri.parse('https://github.com/Kapurichino');
   Future<void> _launchProjectUrl() async {
     if (!await launchUrl(_projectUrl)) {
       throw Exception('Could not launch $_projectUrl');
